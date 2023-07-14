@@ -1,0 +1,5 @@
+-- 演示数学函数
+SELECT ABS(-10) FROM DUAL; -- 绝对值
+SELECT BIN(10) FROM DUAL; -- 十进制转二进制
+SELECT CEILING(-1.1)FROM DUAL; -- 向上取整
+SELECT conv(8,16,2)FROM DUAL;-- 10进制的8转换成2进制
