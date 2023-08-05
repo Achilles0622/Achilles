@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+			<script>
+		//var str="10.55";
+		//var str="10.55a";//最后一位a是不能转换的
+		//var str="10.5a5";//忽略掉字母后面的数字 从这个字母停止转换了
+		//var str="1a0.55";//此处输出为1
+		var str="a10.55";//第一位就停止转换了所以输出NaN（Not a Number）
+		var num1=parseInt(str);// 把字面转为整数
+		var num2=parseFloat(str);//原封不动转换
+		alert(typeof(num1)+":"+num1);
+			alert(typeof(num2)+":"+num2);
+		</script> 
+		
+	</head>
+	<body>
+	</body>
+</html>
