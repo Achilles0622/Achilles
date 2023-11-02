@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script type="text/javascript">
+    var p1 = /^a/; //以a字符开头
+    console.log(p1.test("abc"));
+    var p2 = /a$/;//以a字符结尾
+    console.log(p2.test("abca"));
+    var p3 = /^a$/;//以a开头并且结尾
+    console.log(p3.test("abca"))
+    var p4 = /[1234]/;//测试字段有其中1234有哪一个都可以
+    console.log(p4.test("1"));
+    console.log(p4.test("3"));
+    console.log(p4.test("2"));
+    console.log(p4.test("4"));
+    console.log(p4.test("5"));
+    var p5=/\d/;//[0-9]代表数字
+    console.log(p5.test("130"));
+    var p6=/^[1-9]\d*$/; //以正整数开始和结尾的搜索判断
+    var p7=/a*/;
+    console.log(p7.test("a"));
+
+  </script>
+</head>
+<body>
+
+</body>
+</html>

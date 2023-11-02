@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=640, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"/>
+  <title></title>
+  <style type="text/css">
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    #test {
+      width: 320px;
+      height: 100px;
+      background: pink;
+    }
+  </style>
+</head>
+<body>
+<div id="test">test</div>
+</body>
+<script type="text/javascript">
+  // var targetW = 640;
+  // var scale = targetW / screen.width;
+  // var meta = document.createElement("meta");
+  // meta.name = "viewport";
+  // meta.content = "initial-scale=" + scale + ",minimum-scale=" + scale + ",maximum-scake=" + scale + ",user-scalable=no";
+  // document.head.appendChild(meta);
+  // //   将布局视口调整成设计图的宽度
+  (function () {
+    var targetW = 640;
+    var scale = document.documentElement.clientWidtht / targetW;
+    var meta = document.querySelector("meta[name='viewport']");
+    meta.content = "initial-scale=" + scale + ",minimum-scale=" + scale + ",maximum-scale=" + scale + ",user-scalable=no";
+  })()
+</script>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style type="text/css">
+    /*谷歌下字体默认大小为16px*/
+    /*谷歌最小为12px*/
+    /*实现页面不在不同的设备等比*/
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      font-size: 30px;
+    }
+
+    #test {
+      width: 10em;
+      height: 10em;
+      background: pink;
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+<div id="test">test
+</div>
+</body>
+<script type="text/javascript">
+  var html=document.querySelector("html");
+  //布局适口宽度就是16rem 设计图高宽图也是16rem
+  html.style.fontSize=document.documentElement.clientWidth/16+"px";
+</script>
+</html>

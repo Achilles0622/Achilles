@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script type="text/javascript">
+    var str = "heLLo World";
+    //1提取字符串的长度
+    console.log(str[0]);
+    console.log(str[1]);
+    console.log(str[2]);
+    console.log(str[3]);
+    for (var i = 0; i < str.length; i++) {
+      console.log(str[i]);
+    }
+    //2全部大写提取
+    var str2 = str.toUpperCase();
+    console.log(str2);
+    //3全部小写提取
+    var str3 = str.toLowerCase();
+    console.log(str3);
+    //4字符串首字母索引
+    var index=str.indexOf("orl");
+    console.log(index);
+    //5字符串拼接
+    var str4=str+"sikiedu.com";
+    console.log(str4);
+    var str5 = str.concat("sikiedu.com","!");
+    console.log(str5);
+    //6字符串切割,截取当中的字符串了
+    var str6 = str.slice(2,4);
+    console.log(str6);
+    //7提取内容去掉空格 只会去掉前后空格中间空格是不会去掉的
+    var username="   sik ie um ";
+    var newStr=username.trim()
+    console.log(newStr);
+    console.log(username);
+  </script>
+</head>
+<body>
+
+</body>
+</html>

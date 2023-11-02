@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script type="text/javascript">
+    //key value 键值对
+    // user1 = {name: "siki", age: 80, sex: "男"}
+    // console.log();
+    //下面使用构造器
+    function user(name, age, sex) {
+      this.name = name;
+      this.age = age;
+      this.sex = sex;
+      function show(){
+        console.log(this.name+":"+this.age+":"+this.sex);
+      }
+    }
+    user3=new user("小红",20,"女");
+    user4=new user("李白",40,"男");
+    user3.show();
+    user4.show();
+
+  </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no"/>
+  <title>Title</title>
+  <style type="text/css">
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .item {
+      margin-left: 300px;
+      width: 200px;
+      height: 200px;
+      /*border: 1px solid;*/
+      background: pink;
+      overflow: auto;
+    }
+  </style>
+</head>
+<body>
+<div class="item">itmitmitmitm12312312313123</div>
+<!--<div class="item"></div>-->
+<!--<div class="item"></div>-->
+<!--<div class="item"></div>-->
+<!--<div class="item"></div>-->
+</body>
+<script type="text/javascript">
+  // window.onload = function () {
+  //   var itemNodes = document.getElementsByClassName("item");
+  //   document.body.innerHTML += "<div class='item'></div>";
+  //   for (var i = 0; i < itemNodes.length; i++) {
+  //     itemNodes[i].style.background = "pink";
+  //   }
+  // // }
+  // window.onload = function () {
+  //   var itemNodes = document.querySelectorAll(".item");
+  //   // document.body.innerHTML += "<div class='item'></div>";
+  //   for (var i = 0; i < itemNodes.length; i++) {
+  //     itemNodes[i].style.background = "pink";
+  //   }
+  // }
+  window.onload=function(){
+    var item=document.querySelector(".item");
+    item.ontouchstart=function(){
+      console.log("ontouchstart")
+    }
+    item.ontouchmove=function(){
+      console.log("ontouchmove")
+    }
+    item.ontouchend=function(){
+      console.log("ontouchend")
+    }
+  }
+</script>
+</html>

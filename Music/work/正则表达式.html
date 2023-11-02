@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script type="text/javascript">
+    // var p1=/xxxx/;
+    //规则1 全部是字母的字符串 正则表达式是一个规则
+    //规则2 全部是数字的字符串
+    //规则3 数字开头 长度维4的字符串
+    //规则4 第一个字母是a第二个字母是b 没有其他字符 ab
+    //可以做 搜索 判断   //正则表达式主体/修饰符 i g m      i忽略大小写 g全部替换
+    var p1=/ab/i;
+    var str="hello Abworld sikiedu.com ab";
+    // var index = str.search(p1);
+    // console.log(index);
+    var index = str.search("Ab");
+    console.log(index);
+    var str2=str.replace("Ab","----");//把大写Ab替换成----
+    console.log(str2);
+    var res =p1.test(str);
+    console.log(res);
+  </script>
+</head>
+<body>
+
+</body>
+</html>

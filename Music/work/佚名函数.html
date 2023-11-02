@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script type="text/javascript">
+    // function(){
+    //   console.log("我是佚名函数");
+    // }
+    function attack(attackmode){
+      // console.log("我是用刀进行了攻击");
+      attackmode();
+      console.log("掉血");
+    }
+    attack(function (){
+      console.log("我是用刀进行了攻击")
+    });
+    attack(function (){
+      console.log("我是用枪进行了攻击")
+    });
+  </script>
+</head>
+<body>
+
+</body>
+</html>

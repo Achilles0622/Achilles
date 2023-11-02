@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script type="text/javascript">
+    hp = 100;
+    if (hp <= 0) {//流程控制语句if
+      console.log("GameOver!");
+    }
+    console.log("继续");
+    var a = true;//对 是 有 1
+    var b = false;//错 不是 没有 0
+
+    //比较运算符 == === != > < <= >=比较结果就是布尔类型
+    var n1 = 100, n2 = 90;
+    var res1 = n1 == n2;
+    //=== 还会判断数据类型
+    alert(res1);
+    var season = 1;
+    if (season == 1) {
+      console.log("春季");
+    } else if (season == 2) {
+      console.log("夏天");
+    } else if (season == 3) {
+      console.log("秋天");
+    } else {
+      console.log("冬天");
+    }
+    var month = 2;
+    //判断是哪个季节
+    // if(month>=2){
+    //   if(month<=5){
+    //     console.log("当前春天了")
+    //   }
+    // }简化代码 && ||
+    var a = 10, b = 20;
+    var res1 = a > 10 && b > 10;//只有2面都满足条件时候才是true
+    console.log(res1);
+
+
+  </script>
+</head>
+<body>
+
+</body>
+</html>
