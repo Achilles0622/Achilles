@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style type="text/css">
+    div {
+      width: 200px;
+      height: 200px;
+      margin: 0 auto;
+    }
+
+    div img {
+      width: 200px;
+      height: 200px;
+      text-align: center;
+    }
+  </style>
+  <script type="text/javascript">
+    function init() {
+      window.setInterval(changeImg, 1000); // 使用setInterval代替setTimeout，每秒调用一次changeImg
+    }
+
+    var images = ["yoyo1.jpeg", "yoyo2.jpeg", "yoyo3.jpeg"]; // 图片数组
+    var index = 0;
+
+    function changeImg() {
+      myimg = document.getElementById("myimg");
+      myimg.src = "/img/" + images[index]; // 根据index选择图片
+      index++;
+      if (index >= images.length) {
+        index = 0; // 当index达到数组末尾时，重置为0，实现循环
+      }
+    }
+  </script>
+</head>
+<body onload="init()">
+<div>
+  <img src="/img/yoyo1.jpeg" id="myimg">
+</div>
+</body>
+</html>

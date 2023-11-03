@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body onload="init()" onunload="unload()" onbeforeunload="return beforeUnload()">
+<!--通过onclick属性来添加事件-->
+<div onclick="console.log('我被点击了');">DOM事件</div>
+<div onclick="divClick()">DOM事件</div>
+
+<span id="myspan">给元素添加点击事件</span>
+<p>DOM事件p</p>
+<font>DOM事件</font>
+<a href="http://www.baidu.com">DOM事件a</a>
+</body>
+</html>
+<script type="text/javascript">
+  function init() {
+    console.log("网页加载完成");
+  }
+  function beforeUnload(){
+    return "你确定要离开了么?";
+  }
+
+  function divClick() {
+    console.log("div被点击了");
+  }
+
+  function unload() {
+    alert("网页被销毁");
+  }
+
+  var myspan = document.getElementById("myspan");
+  myspan.onclick = function () {
+    console.log("span被点击了")
+  }
+  myspan.addEventListener("click", spanClick);
+
+  function spanClick() {
+    console.log("span被点击了");
+  }
+</script>
