@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>被折叠隐藏的字符</title>
+    <style>
+        *{margin:0px;padding:0px}
+        body{
+            background-color:aquamarine;
+            width:100%;
+            height:100vh;
+            display:flex;
+        }
+        #char1{
+            /*width:100px;*/
+            /*height:100px;*/
+            background: red;
+            margin:auto;
+            border-radius:85px;
+            padding-left:50px;
+            padding-right:50px;
+
+        }
+        .my-span{
+            color:white;
+            font-size:130px;
+            display:inline-block;
+            transition: 1s;
+        }
+        .my-hide{
+            opacity: 0;
+            width:0px;
+        }
+       #char1:hover>span.my-hide{
+           opacity:1;
+           width:70px;
+       }
+    </style>
+</head>
+<body>
+<div id="char1">
+    <span class="my-span">J</span>
+    <span class="my-span my-hide">a</span>
+    <span class="my-span my-hide">v</span>
+    <span class="my-span my-hide">a</span>
+    <span class="my-span">E</span>
+    <span class="my-span my-hide">E</span>
+</div>
+</body>
+</html>
