@@ -1,0 +1,18 @@
+{
+  "name": "mt",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev":"webpack"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jquery": "^3.7.1",
+    "web": "^0.0.2",
+    "webpack": "^5.42.1",
+    "webpack-cli": "^4.7.2"
+  }
+}
