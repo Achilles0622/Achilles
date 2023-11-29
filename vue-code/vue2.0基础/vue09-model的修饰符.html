@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <input type="text" v-model.number="n1">+<input type="text" v-model.number="n2">=<span>{{ n1+n2}}</span>
+        <hr>
+        <input type="text" v-model.trim="username">
+        <button>ユーザーの名前を取って</button>
+        <hr>
+        <input type="text" v-model.lazy="username">
+    </div>
+    <script src="./lib/vue.js"></script>
+    <script>
+        const vm=new Vue({
+            el: '#app',
+            data: {
+       username:'zhangsan',
+       n1:1,
+       n2:2
+            },
+            methods:{
+                shouwName(){
+                    console.log('ユーザーは:"${this.username}"')
+                }
+            }
+        })
+    </script>
+    
+</body>
+</html>

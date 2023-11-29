@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <p>countの值は：{{ count }}</p>
+        <button @click="add(1)" >+1</button>
+        <button v-on:click="sub(1)">-1</button>
+    </div>
+    <script src="./lib/vue.js"></script>
+    <script>
+        const vm=new Vue({
+            el: '#app',
+            data: {
+              count:0
+            },
+            //
+            methods:{
+                add:function(n){
+                    // console.log(vm === this)
+                    // vm.count+=1
+                    console.log(vm)
+                    this.count+=n
+                },
+                sub(n){
+                    this.count-=n
+                }
+            }
+        })
+    </script>
+    
+</body>
+</html>

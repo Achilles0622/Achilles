@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <p>count值は:{{ count }} </p>
+
+        <button @click="add(1,$event)">+N</button>
+    </div>
+    <script src="./lib/vue.js"></script>
+    <script>
+        const vm = new Vue({
+            el: '#app',
+            data: {
+                count: 0
+            },
+            methods: {
+                add(n,e) {
+                    this.count   += n
+                    console.log(e)
+
+
+                    if (this.count % 2 === 0) {
+                        e.target.style.backgroundColor = 'red'
+                    } else {
+                        e.target.style.backgroundColor = ''
+
+                    }
+                }
+            },
+        })
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <input type="text" v-model="username">
+        <!-- 从 CDN 加载 jQuery v3.6.0 -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+
+    </div>
+    
+    <script src="./lib/vue.js"></script>
+    <script src="./lib/jquery-3.7.0.min.map"></script>
+    <script>
+        const vm =new Vue({
+            el:'#app',
+            data:{
+                username:'admin'
+            },
+            watch:{
+                username(newVal,oldVal){
+                console.log('usernameをもらいました!',newVal,oldVal)
+                $. get('https://www.escook.cn/api/finduser/'+newVal,function(result){
+                    console.log(result)
+
+                })
+            },
+            }
+        })
+    </script>
+</body>
+</html>

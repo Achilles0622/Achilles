@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Axios 示例</title>
+    <!-- 引入 Vue.js 和 Axios -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+
+    <div id="app">
+        <!-- 这里将响应的书籍信息显示在页面上 -->
+        <ul>
+            <li v-for="book in books" :key="book.id">{{ book.name }}</li>
+        </ul>
+    </div>
+
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                books: []
+            },
+            mounted() {
+                // 在 Vue 实例生命周期的 mounted 钩子中发起 Axios 请求
+                axios({
+                    method: 'GET',
+                    url: 'http://www.liulongbin.top:3006/api/getbooks'
+                })
+                .then(response => {
+                    // 请求成功后更新 books 数据
+                    this.books = response.data;
+                })
+                .catch(error => {
+                    console.error('请求错误:', error);
+                });
+            }
+        });
+    </script>
+</body>
+</html>

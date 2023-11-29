@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vue 计算属性示例</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+</head>
+<body>
+
+<div id="app">
+  <p>原始价格：{{ price }}</p>
+  <p>折扣后的价格：{{ discountedPrice }}</p>
+</div>
+
+<script>
+  new Vue({
+    el: '#app',
+    data: {
+      price: 100
+    },
+    computed: {
+      // 计算属性
+      discountedPrice: function() {
+        // 假设有个折扣
+        return this.price * 0.9;
+      }
+    }
+  });
+</script>
+
+</body>
+</html>

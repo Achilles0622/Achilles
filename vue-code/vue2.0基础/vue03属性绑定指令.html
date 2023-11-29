@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <input type="text" v-bind:placeholder="tips">
+        <hr>
+        <img v-bind:src="photo" alr="" style="width:150px">
+        <hr>
+        <div>1+2の結果は:{{1+2}}</div>
+        <div>{{tips}}逆転の結果は:{{tips.split('').reverse().join('')}}</div>
+        <div title="‘box’+index">これはdiv</div>
+    </div>
+    <script src="./lib/vue.js"></script>
+    <script>
+        const vm = new Vue({
+            el: '#app',
+            data: {
+                photo: 'https://v2.cn.vuejs.org/images/logo.svg',
+                index: 3
+            }
+        })
+    </script>
+
+</body>
+
+</html>
