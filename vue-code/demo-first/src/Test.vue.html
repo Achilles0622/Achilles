@@ -1,0 +1,38 @@
+<template>
+ <div><!--只能出现一个根元素（div） -->
+    <div class="test-box">
+        <h3>这是用户自定义Test.vue {{username}}</h3>
+        <button @click="changeName">ユーザーの名前を変える</button>
+   
+    </div>
+    <div>123</div>
+</div>
+</template>
+
+<script>
+export default {
+    date: function () {
+    return {
+    username: 'admin'
+    }
+    },
+    methods: {
+        changeName() {
+            console.log(this)
+            this.username = 'wahaha'
+        },
+    },
+    watch: {
+    computed: {},
+    filters:{},
+    },
+    }
+</script>
+<style lang="less">
+    test-box {
+        background-color: pink;
+        h3{
+            color:red;
+        }
+    }
+</style>
