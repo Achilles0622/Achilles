@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/tv_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="视图宽高采用wrap定义"
+        android:textColor="#000000"
+        android:background="#00ffff"
+        android:textSize="17sp"></TextView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="视图宽高采用match定义"
+        android:textColor="#000000"
+        android:background="#00ffff"
+        android:textSize="17sp"></TextView>
+
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="300dp"
+        android:textColor="#000000"
+        android:background="#00ffff"
+        android:textSize="17sp"></TextView>
+
+
+
+</LinearLayout>

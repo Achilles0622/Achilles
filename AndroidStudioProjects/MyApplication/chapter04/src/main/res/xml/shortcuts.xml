@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <shourcut
+        android:shortcutId="first"
+        android:enabled="true"
+        android:icon="@mipmap/ic_launcher"
+        android:shourcutShortLabel="first"
+        android:shortcutLongLabel="汽艇活动">
+         <intent
+             android:action="android.intent.action.VIEW"
+             android:targetPackage="com.g"/>
+
+    </shourcut>
+
+</shortcuts>
